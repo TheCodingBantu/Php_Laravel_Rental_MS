@@ -12,6 +12,7 @@
                     <thead>
                     <tr>
                         <th>Invoice Ref</th>
+                        <th>Unit</th>
                         <th>Amount</th>
                         <th>Tenant Name</th>
                         <th>Date From</th>
@@ -25,14 +26,16 @@
                     <tbody>
                         @foreach ($invoices as $invoice)
                         <tr >
-                            <td >{{$invoice->ref_number}}</td>
+                            <td ><a target="_blank" href="{{route('invoice.pdf', ['tid' => $invoice->tenant_id,'iid'=>$invoice->id,'iref'=>$invoice->ref_number])}}">{{$invoice->ref_number}}</a></td>
+                            <td>{{$invoice->unit->unit_number}}</td>
+
                             <td>{{$invoice->amount}}</td>
                             <td>{{$invoice->tenant->tenant_name}}</td>
-
                             <td>{{$invoice->start_date}}</td>
                             <td>{{$invoice->end_date}}</td>
                             <td>{{$invoice->due_date}}</td>
-                            <td>{{$invoice->payment_status}}</td>
+                            <td ><span class="badge bg-danger">{{$invoice->payment_status}}</span></td>
+
                             <td>edit</td>
 
                         </tr>

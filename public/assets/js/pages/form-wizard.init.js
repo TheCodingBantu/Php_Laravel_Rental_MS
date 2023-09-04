@@ -1,1 +1,9 @@
-$(function(){$("#form-horizontal").steps({headerTag:"h3",bodyTag:"fieldset",transitionEffect:"slide"})});
+$(function () {
+    $("#form-horizontal").steps({
+        headerTag: "h3",
+        bodyTag: "fieldset",
+        transitionEffect: "slide",
+    
+    });
+    $('#invoice').select2()
+});

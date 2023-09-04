@@ -89,38 +89,7 @@
                             </button>
                         </div>
 
-                        <div class="dropdown d-none d-md-block me-2">
-                            <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="font-size-16"> English </span> <img class="ms-2" src="assets/images/flags/us_flag.jpg" alt="Header Language" height="16">
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end">
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/germany_flag.jpg" alt="user-image" height="12"> <span class="align-middle"> German </span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/italy_flag.jpg" alt="user-image" height="12"> <span class="align-middle"> Italian </span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/french_flag.jpg" alt="user-image" height="12"> <span class="align-middle"> French </span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/spain_flag.jpg" alt="user-image" height="12"> <span class="align-middle"> Spanish </span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/russia_flag.jpg" alt="user-image" height="12"> <span class="align-middle"> Russian </span>
-                                </a>
-                            </div>
-                        </div>
 
                         <div class="dropdown d-inline-block me-2">
                             <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -197,7 +166,7 @@
 
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
+                                <img class="rounded-circle header-profile-user" src="{{asset('assets/images/users/avatar-1.jpg')}}" alt="Header Avatar">
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
@@ -242,7 +211,7 @@
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="mdi mdi-email-outline"></i>
-                                    <span> Manage Users </span>
+                                    <span>Users </span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('users')}}">Users List</a></li>
@@ -253,7 +222,7 @@
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="mdi mdi-buffer"></i>
-                                    <span>Manage Property </span>
+                                    <span>Property </span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('property.show')}}">Property List</a></li>
@@ -278,7 +247,7 @@
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="mdi mdi-clipboard-outline"></i>
-                                    <span>Manage Tenants</span>
+                                    <span>Tenants</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('tenant.show')}}">Tenant List</a></li>
@@ -299,176 +268,21 @@
                                 </ul>
                             </li>
 
-                            <li>
-                                <a href="calendar.html" class="waves-effect">
-                                    <i class="mdi mdi-calendar-check"></i>
-                                    <span>Calendar</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="file-manager.html" class="waves-effect">
-                                    <i class="mdi mdi-file-document-outline"></i>
-                                    <span>File Manager</span>
-                                    <span class="badge rounded-pill bg-danger float-end">New</span>
-                                </a>
-                            </li>
-
-                            <li class="menu-title">Components</li>
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-format-list-bulleted-type"></i>
-                                    <span>Tables</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="tables-basic.html">Basic Tables</a></li>
-                                    <li><a href="tables-datatable.html">Data Table</a></li>
-                                    <li><a href="tables-responsive.html">Responsive Table</a></li>
-                                    <li><a href="tables-editable.html">Editable Table</a></li>
-                                </ul>
-                            </li>
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="mdi mdi-album"></i>
-                                    <span>Icons</span>
+                                    <span>Payments</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="icons-material.html">Material Design</a></li>
-                                    <li><a href="icons-ion.html">Ion Icons</a></li>
-                                    <li><a href="icons-fontawesome.html">Font Awesome</a></li>
-                                    <li><a href="icons-themify.html">Themify Icons</a></li>
-                                    <li><a href="icons-dripicons.html">Dripicons</a></li>
-                                    <li><a href="icons-typicons.html">Typicons Icons</a></li>
-                                    <li><a href="icons-weather.html">Weather Icons</a></li>
-                                    <li><a href="icons-mobirise.html">Mobirise Icons</a></li>
+                                    <li><a href="{{route('payment.show')}}">Payment List</a></li>
+                                    <li><a href="{{route('payment.create')}}">Pay Now</a></li>
+                                    <li><a href="{{route('processor.show')}}">Payment Methods</a></li>
+
                                 </ul>
                             </li>
 
-                            <li>
-                                <a href="javascript: void(0);" class="waves-effect">
-                                    <span class="badge rounded-pill bg-danger float-end">2</span>
-                                    <i class="mdi mdi-google-maps"></i>
-                                    <span>Maps</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="maps-google.html">Google Map</a></li>
-                                    <li><a href="maps-vector.html">Vector Map</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="menu-title">Extras</li>
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-movie-filter-outline"></i>
-                                    <span>Layouts</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="true">
-                                    <li>
-                                        <a href="javascript: void(0);" class="has-arrow">Vertical</a>
-                                        <ul class="sub-menu" aria-expanded="true">
-                                            <li><a href="layouts-light-sidebar.html">Light Sidebar</a></li>
-                                            <li><a href="layouts-compact-sidebar.html">Compact Sidebar</a></li>
-                                            <li><a href="layouts-icon-sidebar.html">Icon Sidebar</a></li>
-                                            <li><a href="layouts-boxed.html">Boxed Layout</a></li>
-                                            <li><a href="layouts-colored-sidebar.html">Colored Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0);" class="has-arrow">Horizontal</a>
-                                        <ul class="sub-menu" aria-expanded="true">
-                                            <li><a href="layouts-horizontal.html">Horizontal</a></li>
-                                            <li><a href="layouts-hori-topbar-light.html">Light Topbar</a></li>
-                                            <li><a href="layouts-hori-boxed.html">Boxed Layout</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-account-box"></i>
-                                    <span>Authentication</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="pages-login.html">Login</a></li>
-                                    <li><a href="pages-register.html">Register</a></li>
-                                    <li><a href="pages-recoverpw.html">Recover Password</a></li>
-                                    <li><a href="pages-lock-screen.html">Lock Screen</a></li>
-                                    <li><a href="pages-login-2.html">Login 2</a></li>
-                                    <li><a href="pages-register-2.html">Register 2</a></li>
-                                    <li><a href="pages-recoverpw-2.html">Recover Password 2</a></li>
-                                    <li><a href="pages-lock-screen-2.html">Lock Screen 2</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-book-multiple-outline"></i>
-                                    <span>Extra Pages</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="pages-timeline.html">Timeline</a></li>
-                                    <li><a href="pages-invoice.html">Invoice</a></li>
-                                    <li><a href="pages-directory.html">Directory</a></li>
-                                    <li><a href="pages-blank.html">Blank Page</a></li>
-                                    <li><a href="pages-404.html">Error 404</a></li>
-                                    <li><a href="pages-500.html">Error 500</a></li>
-                                    <li><a href="pages-pricing.html">Pricing</a></li>
-                                    <li><a href="pages-gallery.html">Gallery</a></li>
-                                    <li><a href="pages-maintenance.html">Maintenance</a></li>
-                                    <li><a href="pages-coming-soon.html">Coming Soon</a></li>
-                                </ul>
-                            </li>
-
-
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-flask-outline"></i>
-                                    <span> Email Templates </span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="email-templates-basic.html">Basic Action Email</a></li>
-                                    <li><a href="email-templates-alert.html">Alert Email</a></li>
-                                    <li><a href="email-templates-billing.html">Billing Email</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="menu-title">Help & Support</li>
-
-                            <li>
-                                <a href="faq.html" class="waves-effect">
-                                    <i class="mdi mdi-help-circle"></i>
-                                    <span> FAQ </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="contact.html" class="waves-effect">
-                                    <span class="badge rounded-pill bg-warning float-end">3</span>
-                                    <i class="mdi mdi-face-agent"></i>
-                                    <span>   Contact  </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="dripicons-network-1"></i>
-                                    <span>Multi Level</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="true">
-                                    <li><a href="javascript: void(0);">Level 1.1</a></li>
-                                    <li><a href="javascript: void(0);" class="has-arrow">Level 1.2</a>
-                                        <ul class="sub-menu" aria-expanded="true">
-                                            <li><a href="javascript: void(0);">Level 2.1</a></li>
-                                            <li><a href="javascript: void(0);">Level 2.2</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
+                           
                         </ul>
                     </div>
                     <!-- Sidebar -->

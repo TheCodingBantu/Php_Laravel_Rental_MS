@@ -10,10 +10,12 @@ class Invoice extends Model
     use HasFactory;
     protected $fillable=[
         'tenant_id',
+        'unit_id',
         'amount',
+        'payment_id',
         'balance',
         'ref_number',
-        'invoice_status',
+        'payment_status',
         'start_date',
         'end_date',
         'due_date'
@@ -22,4 +24,8 @@ class Invoice extends Model
     public function tenant(){
         return $this->belongsTo(Tenant::class,'tenant_id');
     }
+    public function unit(){
+        return $this->belongsTo(Unit::class,'unit_id');
+    }
+
 }

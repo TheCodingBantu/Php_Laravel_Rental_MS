@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('tenant_name');
             $table->string('tenant_phone');
+            $table->string('email');
             $table->integer('unit_id');
             $table->string('status');
+            $table->string('address');
             $table->datetime('rent_due_date');
             $table->datetime('date_of_entry');
             $table->integer('national_id');

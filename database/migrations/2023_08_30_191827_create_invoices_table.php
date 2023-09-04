@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
             $table->integer('tenant_id');
+            $table->integer('unit_id');
+            $table->integer('payment_id')->nullable();
             $table->integer('amount');
             $table->datetime('start_date');
             $table->datetime('end_date');

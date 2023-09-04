@@ -22,28 +22,6 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="mb-3">
-                                <label class="form-label" for="metatitle">Unit Occupied</label>
-                                <select id="unit" class="form-select select2">
-                                    <option>Search Units</option>
-                                    @foreach ($units as $unit)
-                                    <option value="{{$unit->id}}">{{$unit->property->title .' - ' . $unit->unit_number}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label" for="">ID Number</label>
-                                <input id="idnumber"  type="number" class="form-control">
-                            </div>
-                        </div>
-
-
-                        <div class="col-sm-6">
-                            {{-- <div class="mb-3">
-                                <label class="form-label" for="metatitle">Entry Date</label>
-                                <input id="entry-date"  type="date" class="form-control">
-                                <input type="text" class="form-control" placeholder="dd M, yyyy" data-date-format="dd M, yyyy" data-date-container="#datepicker1" data-provide="datepicker">
-                            </div> --}}
 
                             <div class="mb-3">
                                 <label class="form-label">Entry Date</label>
@@ -70,6 +48,24 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="mb-3">
+                                <label class="form-label" for="">email</label>
+                                <input id="email"  type="email" class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="">ID Number</label>
+                                <input id="idnumber"  type="number" class="form-control">
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label class="form-label" for="">Address</label>
+                                <input id="address"  type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
                                 <label class="form-label" for="metatitle">Status</label>
                                 <select id="statuss" class="form-select select2">
                                     <option value="active">Active</option>
@@ -77,9 +73,25 @@
 
                                 </select>
                             </div>
+
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label class="form-label" for="metatitle">Unit Occupied</label>
+                                <select id="unit" class="form-select select2">
+                                    <option>Search Units</option>
+                                    @foreach ($units as $unit)
+                                    <option value="{{$unit->id}}">{{$unit->property->title .' - ' . $unit->unit_number}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                             <div class="mb-3">
                                 <label class="form-label" for="metatitle"></label>
+                                <input type="hidden" name="" id="">
+
                             </div>
+
                         </div>
 
 
@@ -105,10 +117,14 @@
      let name=$('#name').val();
      let phone=$('#phone').val();
      let unit=$('#unit').val();
+     let email=$('#email').val();
+     let address=$('#address').val();
      let status=$('#statuss').val();
      let rent_date=$('#rentdate').val();
      let entry_date=$('#entrydate').val();
      let id_number=$('#idnumber').val();
+
+     console.log(address);
  $.ajax({
             url: "{{route('tenant.store')}}",
             type: 'POST',
@@ -117,6 +133,8 @@
                 name,
                 phone,
                 status,
+                email,
+                address,
                 rent_date,
                 entry_date,
                 id_number,

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Property;
+use App\Models\Tenant;
 use App\Models\Unit;
 use Illuminate\Http\Request;
 
@@ -14,6 +15,13 @@ class UnitController extends Controller
       $title = 'Unit List';
       $units = Unit::all();
       return view('units',compact('units','title'));
+  }
+  public function getTenantUnit(){
+
+    $tenant=Tenant::find(request('tid'));
+
+    return Response(['unit' => $tenant->unit_id]);
+
   }
 
   public function store()
