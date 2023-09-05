@@ -20,12 +20,15 @@ class TenantController extends Controller
 
     public function store(Request $request)
     {
+
         try {
             // tenant should also be created on first payment
             Tenant::create([
 
                 'tenant_name' => request('name'),
                 'tenant_phone' => request('phone'),
+                'email' => request('email'),
+                'address' => request('address'),
                 'unit_id' => request('unit'),
                 'status' => request('status'),
                 'rent_due_date' =>Carbon::createFromFormat('d/m/Y', request('rent_date')),
@@ -39,6 +42,7 @@ class TenantController extends Controller
             return Response(['error' => $th->getMessage()]);
         }
     }
+
     public function create(){
 
       $units =Unit::all();
